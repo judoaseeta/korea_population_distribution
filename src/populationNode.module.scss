@@ -1,0 +1,36 @@
+.populationNodeWrapper {
+    @apply w-full h-ih border border-t-0 border-border;
+}
+.populationNode {
+    @apply w-full  grid bg-transparent grid-cols-node;
+    place-items: stretch stretch;
+}
+.svg {
+    @apply border-b border-border;
+}
+.bgSet {
+    &[data-depth='1'] {
+        @apply bg-slate-50;
+    }
+    &[data-depth='2'] {
+        @apply bg-slate-100;
+    }
+    &[data-depth='3'] {
+        @apply bg-slate-200;
+    }
+    &[data-depth='4'] {
+        @apply bg-slate-300;
+    }
+}
+.populationItem {
+    @apply flex items-center w-full  bg-transparent break-words;
+}
+.address {
+    @apply text-xs;
+    &.clickable {
+        @apply cursor-default;
+        &:hover {
+            @apply underline;
+        }
+    }
+}
